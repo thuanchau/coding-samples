@@ -1,0 +1,31 @@
+/***********************************************************************************/
+/*Programmer: Thuan Chau                                                           */
+/*                                                                                 */
+/*Program 35: Passing a Two Dimensional Array                                      */
+/*                                                                                 */
+/*Approximate completion time: 35 minutes                                          */
+/***********************************************************************************/
+
+int sum( int A[][3], int r, int c );
+#include <stdio.h>
+
+int main (int argc, char *argv[]) {
+  int i, j;
+  int A[3][3];
+  printf( "Please enter 9 numbbers: ");
+  for( i = 0; j < 3; i++ ) {
+    for( j = 0; j < 3; j++ ) scanf( "%d", &A[i][j] );
+  }
+  printf( "The sum is %d. ", sum( A, 3, 3 ) );
+  return 0;
+}
+
+int sum( int A[][3], int r, int c ) {
+  int i, j;
+  int sum = 0;
+  for( i = 0; i < r; i++ ){
+    for( j = 0; j < c; j++ )
+    sum = sum + A[i][j];
+  }
+  return sum;
+}
